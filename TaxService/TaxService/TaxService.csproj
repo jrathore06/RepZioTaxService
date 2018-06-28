@@ -10,5 +10,14 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ITaxInterface.cs" />
+    <Compile Remove="EmptyCSharpFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="ITaxService" />
+    <None Remove="ITaxService" />
   </ItemGroup>
 </Project>
