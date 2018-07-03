@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-namespace TaxService.Objects
+namespace TaxService.Models
 {
     public class TaxBreakdown
     {

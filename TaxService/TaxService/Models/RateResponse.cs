@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-namespace TaxService.Objects
+namespace TaxService.Models
 {
     public class RateResponse
     {
         [JsonProperty("rate")]
-        public RateResponseAttributes Rate { get; set; }
-    }
+        public Rate Rate { get; set; }
 
-    public class RateResponseAttributes
-    {
         [JsonProperty("zip")]
         public string Zip { get; set; }
 
@@ -67,23 +64,5 @@ namespace TaxService.Objects
 
         [JsonProperty("distance_sale_threshold")]
         public decimal DistanceSaleThreshold { get; set; }
-    }
-
-    public class Rate
-    {
-        [JsonProperty("country")]
-        public string Country { get; set; }
-
-        [JsonProperty("zip")]
-        public string Zip { get; set; }
-
-        [JsonProperty("state")]
-        public string State { get; set; }
-
-        [JsonProperty("city")]
-        public string City { get; set; }
-
-        [JsonProperty("street")]
-        public string Street { get; set; }
     }
 }

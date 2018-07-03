@@ -1,44 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-namespace TaxService.Objects
+namespace TaxService.Models
 {
-    public class TaxResponse
-    {
-        [JsonProperty("tax")]
-        public TaxResponseAttributes Tax { get; set; }
-    }
-
-    public class TaxResponseAttributes
-    {
-        [JsonProperty("order_total_amount")]
-        public decimal OrderTotalAmount { get; set; }
-
-        [JsonProperty("shipping")]
-        public decimal Shipping { get; set; }
-
-        [JsonProperty("taxable_amount")]
-        public decimal TaxableAmount { get; set; }
-
-        [JsonProperty("amount_to_collect")]
-        public decimal AmountToCollect { get; set; }
-
-        [JsonProperty("rate")]
-        public decimal Rate { get; set; }
-
-        [JsonProperty("has_nexus")]
-        public bool HasNexus { get; set; }
-
-        [JsonProperty("freight_taxable")]
-        public bool FreightTaxable { get; set; }
-
-        [JsonProperty("tax_source")]
-        public string TaxSource { get; set; }
-
-        [JsonProperty("breakdown")]
-        public TaxBreakdown Breakdown { get; set; }
-    }
-
     public class Tax
     {
         [JsonProperty("from_country")]
@@ -85,23 +49,5 @@ namespace TaxService.Objects
 
         [JsonProperty("line_items")]
         public List<TaxLineItem> LineItems { get; set; }
-    }
-
-    public class TaxLineItem
-    {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
-        [JsonProperty("quantity")]
-        public int Quantity { get; set; }
-
-        [JsonProperty("product_tax_code")]
-        public string ProductTaxCode { get; set; }
-
-        [JsonProperty("unit_price")]
-        public decimal UnitPrice { get; set; }
-
-        [JsonProperty("discount")]
-        public decimal Discount { get; set; }
     }
 }

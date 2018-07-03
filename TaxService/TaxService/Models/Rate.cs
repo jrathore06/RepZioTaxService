@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-namespace TaxService.Objects
+namespace TaxService.Models
 {
-    public class NexusAddress
+    public class Rate
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
 
         [JsonProperty("country")]
         public string Country { get; set; }
@@ -22,5 +20,6 @@ namespace TaxService.Objects
 
         [JsonProperty("street")]
         public string Street { get; set; }
+
     }
 }
