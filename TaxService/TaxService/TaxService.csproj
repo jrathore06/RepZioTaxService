@@ -23,5 +23,6 @@
   <ItemGroup>
     <None Remove="ITaxService" />
     <None Remove="ITaxService" />
+    <None Remove="web.config" />
   </ItemGroup>
 </Project>
